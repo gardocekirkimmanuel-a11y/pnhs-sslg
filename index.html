@@ -2,51 +2,68 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PNHS SSLG</title>
+<title>PNHS SSLG Official Website</title>
 
 <style>
 
-/* GLOBAL */
+/* ===== GLOBAL ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 html{
 scroll-behavior:smooth;
 }
 
 body{
-margin:0;
 font-family:Arial, sans-serif;
+background:
+linear-gradient(to bottom,
+#02060f,
+#08172d,
+#0a1d38);
 color:white;
-background:linear-gradient(to bottom, #050b18, #081a33);
+overflow-x:hidden;
 }
 
-/* NAV */
+/* ===== NAVBAR ===== */
+
 nav{
 position:fixed;
 top:0;
 width:100%;
+padding:18px 40px;
 display:flex;
 justify-content:center;
-gap:20px;
-padding:15px;
-background:rgba(5,11,24,0.85);
-backdrop-filter:blur(10px);
+gap:28px;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(14px);
 z-index:1000;
+flex-wrap:wrap;
+border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-weight:bold;
 font-size:14px;
+font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
-color:#7fb3ff;
+color:#8ebcff;
 }
 
-/* HERO (ONLY FIRST VIEW) */
+/* ===== HERO ===== */
+
 .hero{
 height:100vh;
 display:flex;
@@ -54,30 +71,35 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+
 background:
-linear-gradient(rgba(0,0,0,0.7), rgba(0,0,80,0.4)),
-url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac');
+linear-gradient(rgba(0,0,0,0.65), rgba(0,10,40,0.65)),
+url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2070&auto=format&fit=crop');
+
 background-size:cover;
 background-position:center;
 }
 
 .hero-content{
-max-width:900px;
+max-width:950px;
 }
 
 .hero h1{
-font-size:50px;
-margin-bottom:20px;
+font-size:65px;
+line-height:1.1;
+margin-bottom:25px;
 }
 
 .hero p{
-font-size:18px;
-line-height:1.6;
+font-size:19px;
+line-height:1.8;
+max-width:850px;
+margin:auto;
+opacity:0.9;
 }
 
-/* BUTTONS */
-.btn-group{
-margin-top:30px;
+.hero-buttons{
+margin-top:40px;
 display:flex;
 justify-content:center;
 gap:20px;
@@ -85,10 +107,11 @@ flex-wrap:wrap;
 }
 
 .btn{
-padding:14px 30px;
-border-radius:12px;
+padding:15px 35px;
+border-radius:14px;
 font-weight:bold;
 text-decoration:none;
+transition:0.3s;
 }
 
 .btn-primary{
@@ -96,56 +119,220 @@ background:white;
 color:black;
 }
 
-.btn-outline{
-border:2px solid white;
-color:white;
+.btn-primary:hover{
+transform:translateY(-3px);
 }
 
-/* SECTIONS */
+.btn-outline{
+border:1px solid rgba(255,255,255,0.5);
+color:white;
+backdrop-filter:blur(10px);
+}
+
+.btn-outline:hover{
+background:rgba(255,255,255,0.1);
+}
+
+/* ===== SECTIONS ===== */
+
 section{
-padding:90px 20px;
+padding:110px 8%;
+scroll-margin-top:90px;
+}
+
+.section-title{
+font-size:48px;
+margin-bottom:20px;
 text-align:center;
 }
 
-.title{
-font-size:40px;
-margin-bottom:15px;
+.section-desc{
+text-align:center;
+max-width:950px;
+margin:auto;
+line-height:1.9;
+font-size:18px;
+opacity:0.9;
 }
 
-.desc{
-max-width:900px;
-margin:auto;
-line-height:1.8;
+/* ===== GLASS CARDS ===== */
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:50px;
+}
+
+.card{
+width:300px;
+
+background:
+rgba(255,255,255,0.08);
+
+border:
+1px solid rgba(255,255,255,0.12);
+
+backdrop-filter:blur(18px);
+
+border-radius:24px;
+
+padding:28px;
+
+box-shadow:
+0 10px 35px rgba(0,0,0,0.3);
+
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.card p{
+line-height:1.7;
+opacity:0.9;
+}
+
+/* ===== ABOUT ===== */
+
+.about-layout{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+margin-top:50px;
+}
+
+.about-image{
+width:420px;
+height:420px;
+border-radius:30px;
+object-fit:cover;
+background:#122544;
+}
+
+.about-text{
+max-width:700px;
+}
+
+.about-text p{
+margin-bottom:22px;
+line-height:1.9;
 font-size:17px;
 }
 
-/* CARDS */
-.card-container{
+/* ===== OFFICERS ===== */
+
+.officer-card{
+width:250px;
+text-align:center;
+}
+
+.officer-card img{
+width:100%;
+height:270px;
+object-fit:cover;
+border-radius:22px;
+margin-bottom:18px;
+background:#102447;
+}
+
+/* ===== ANNOUNCEMENTS ===== */
+
+.announcement-card{
+max-width:850px;
+margin:25px auto;
+}
+
+/* ===== GALLERY ===== */
+
+.gallery{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:20px;
+margin-top:50px;
+}
+
+.gallery img{
+width:300px;
+height:220px;
+object-fit:cover;
+border-radius:20px;
+background:#122544;
+}
+
+/* ===== CONTACT ===== */
+
+.contact-box{
+text-align:center;
 margin-top:40px;
+line-height:2.2;
+font-size:18px;
+}
+
+.contact-box a{
+color:#9cc6ff;
+text-decoration:none;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+padding:30px;
+text-align:center;
+background:#030812;
+margin-top:40px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.section-title{
+font-size:34px;
+}
+
+.hero p,
+.section-desc{
+font-size:16px;
+}
+
+nav{
+padding:16px 12px;
+gap:16px;
+}
+
+nav a{
+font-size:12px;
+}
+
+.about-image{
+width:100%;
+height:300px;
+}
+
+.gallery img{
+width:100%;
 }
 
 .card{
-background:#0b1f3a;
-padding:25px;
-border-radius:18px;
-width:260px;
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
+width:100%;
 }
 
-/* ABOUT SPECIAL */
-.about{
-background:linear-gradient(to right, #081a33, #050b18);
-}
-
-/* FOOTER */
-footer{
-padding:25px;
-text-align:center;
-background:#050b18;
 }
 
 </style>
@@ -154,28 +341,40 @@ background:#050b18;
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
+
 <nav>
+
 <a href="#home">Home</a>
 <a href="#about">About Us</a>
-<a href="#content">Explore</a>
+<a href="#updates">Updates</a>
+<a href="#officers">Officers</a>
+<a href="#ppp">Project PPP</a>
+<a href="#calendar">Calendar</a>
+<a href="#legislative">Legislative Works</a>
+<a href="#gallery">Past Events</a>
+<a href="#contacts">Contacts</a>
+
 </nav>
 
 <!-- HERO -->
+
 <section class="hero" id="home">
 
 <div class="hero-content">
 
-<h1>PNHS Supreme Secondary Learner Government</h1>
+<h1>
+PNHS Supreme Secondary Learner Government
+</h1>
 
 <p>
-A student-led organization committed to leadership, service, and unity for every Puti-anian learner.
+Empowering learners through leadership, service, innovation, and student-centered initiatives for every Puti-anian.
 </p>
 
-<div class="btn-group">
+<div class="hero-buttons">
 
-<a href="#content" class="btn btn-primary">
-Explore
+<a href="#updates" class="btn btn-primary">
+Updates
 </a>
 
 <a href="#about" class="btn btn-outline">
@@ -188,229 +387,339 @@ About Us
 
 </section>
 
-<!-- FULL CONTENT START -->
-<section id="content">
-
-<h2 class="title">Welcome to PNHS SSLG</h2>
-
-<p class="desc">
-Explore the official programs, initiatives, and leadership works of the Supreme Secondary Learner Government.
-</p>
-
 <!-- ABOUT -->
-<section id="about" class="about">
 
-<h2 class="title">About PNHS SSLG</h2>
+<section id="about">
 
-<p class="desc">
-The Puti-an National High School Supreme Secondary Learner Government (PNHS SSLG) is the official student-led governing body committed to representing the voice, welfare, and aspirations of the learners within the school community. It serves as a bridge between the student body and the school administration, ensuring that every concern, suggestion, and initiative is heard, respected, and acted upon with fairness, accountability, and transparency.
+<h2 class="section-title">
+About PNHS SSLG
+</h2>
+
+<div class="about-layout">
+
+<img src="your-photo.jpg" class="about-image">
+
+<div class="about-text">
+
+<p>
+The Puti-an National High School Supreme Secondary Learner Government serves as the official student governing body dedicated to representing the voices, interests, and welfare of every learner.
 </p>
 
-<p class="desc">
-Rooted in the values of leadership, service, and unity, the SSLG actively designs and implements programs, projects, and activities that promote academic excellence, student engagement, discipline, and holistic development. Through initiatives that support learner welfare, environmental responsibility, and leadership formation, the organization strives to create a safe, inclusive, and empowering school environment where every student is given the opportunity to grow and succeed.
+<p>
+Through meaningful leadership and collaborative governance, the SSLG creates impactful initiatives that promote academic growth, discipline, student empowerment, and community participation.
 </p>
 
-<p class="desc">
-Beyond governance, the PNHS SSLG is also a platform for student leadership development, encouraging young leaders to take initiative, collaborate effectively, and uphold integrity in service. It fosters a culture of active participation where students are not only beneficiaries of programs but also contributors to meaningful change within the school.
+<p>
+Guided by integrity, service, and excellence, the organization continuously strives to establish learner-centered programs that create positive and sustainable change within the school community.
 </p>
 
-<p class="desc">
-Guided by its commitment to “Proteksyon, Pag-unlad, at Pagpapahalaga,” the SSLG continues to strengthen its mission of building a progressive, student-centered institution that values every learner’s voice and potential.
+</div>
+
+</div>
+
+<h2 class="section-title" style="margin-top:90px;">
+Strategic Goals
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Proteksyon</h3>
+<p>
+Ensuring learner safety, welfare, inclusivity, and student support systems across the school community.
 </p>
-
-</section>
-
-<!-- CALENDAR -->
-<section>
-
-<h2 class="title">Calendar of Activities</h2>
-
-<div class="card-container">
-
-<div class="card">
-<h3>June</h3>
-<p>Bible Verse Posting; Acquaintance Party</p>
 </div>
 
 <div class="card">
-<h3>July</h3>
-<p>Nutrition Month Celebration</p>
+<h3>Pag-unlad</h3>
+<p>
+Promoting leadership development, academic excellence, innovation, and holistic learner growth.
+</p>
 </div>
 
 <div class="card">
-<h3>August</h3>
-<p>Buwan ng Wika Celebration & Activities</p>
-</div>
-
-<div class="card">
-<h3>September</h3>
-<p>Environmental & Academic Activities; Intramurals</p>
-</div>
-
-<div class="card">
-<h3>October</h3>
-<p>Mental Health Awareness & Anti-Bullying Campaigns; Teacher's Day Celebration; United Nations Celebration</p>
-</div>
-
-<div class="card">
-<h3>November</h3>
-<p>Halloween Activity</p>
-</div>
-
-<div class="card">
-<h3>December</h3>
-<p>Christmas Party Celebration</p>
-</div>
-
-<div class="card">
-<h3>January</h3>
-<p>Peer Tutoring & Academic Intervention Activities</p>
-</div>
-
-<div class="card">
-<h3>February</h3>
-<p>Hearts Day Celbration; Prom; FebruART Outreach Program</p>
-</div>
-
-<div class="card">
-<h3>March</h3>
-<p>Safety & Leadership Trainings</p>
+<h3>Pagpapahalaga</h3>
+<p>
+Strengthening respect, unity, discipline, appreciation, and active participation among learners.
+</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- LEGISLATIVE -->
-<section>
+<!-- UPDATES -->
 
-<h2 class="title">Legislative Works</h2>
+<section id="updates">
 
-<div class="card-container">
+<h2 class="section-title">
+Latest Updates & Announcements
+</h2>
 
-<div class="card">
-<h3>Resolution No. 001, s. 2026</h3>
-<p>A RESOLUTION REQUESTING THE APPROVAL AND AUTHORIZING THE IMPLEMENTATION OF PROJECT PPP: PROTEKSYON, PAG-UNLAD, AT PAGPAPAHALAGA AND ITS IDENTIFIED PROGRAMS, PROJECTS, AND ACTIVITIES (PPAs) OF THE SUPREME SECONDARY LEARNER GOVERNMENT (SSLG) OF PUTI-AN NATIONAL HIGH SCHOOL FOR SCHOOL YEAR 2026–2027.</p>
+<p class="section-desc">
+Stay informed with the latest SSLG announcements, activities, and official student governance updates.
+</p>
+
+<div class="cards">
+
+<div class="card announcement-card">
+<h3>Project PPP Official Launch</h3>
+<p>
+The SSLG officially launches Project PPP: Proteksyon, Pag-unlad, at Pagpapahalaga for SY 2026–2027.
+</p>
 </div>
 
-<div class="card">
-<h3>Resolution No. 003 s. 2026</h3>
-<p>A RESOLUTION AUTHORIZING SSLG VICE PRESIDENT RICALYN D. JIMENEZ TO OVERSEE THE IMPLEMENTATION OF "GREENER PUTI-AN HIGH", A SUB-PROJECT OF PROJECT PPP, UNDER THE SUPERVISION OF THE SSLG PRESIDENT ANDSSLG ADVISER.</p>
+<div class="card announcement-card">
+<h3>Leadership Summit 2026</h3>
+<p>
+Registration for the upcoming SSLG Leadership Summit will open soon.
+</p>
 </div>
+
+<div class="card announcement-card">
+<h3>Fix-in Policy Activation</h3>
+<p>
+Students may now submit concerns through the official Fix-in Policy portal.
+</p>
+</div>
+
+</div>
+
+<div style="text-align:center; margin-top:40px;">
+
+<a href="#" class="btn btn-primary">
+View All Announcements
+</a>
 
 </div>
 
 </section>
 
 <!-- OFFICERS -->
-<section>
 
-<h2 class="title">SSLG OFFICERS SY. 2026-2027</h2>
+<section id="officers">
 
-<div class="card-container">
+<h2 class="section-title">
+SSLG Officers SY 2026–2027
+</h2>
+
+<p class="section-desc">
+Meet the student leaders serving the Puti-an National High School community.
+</p>
+
+<div class="cards">
+
+<div class="card officer-card">
+<img src="your-photo.jpg">
+<h3>Kirk Immanuel Gardoce</h3>
+<p>SSLG President</p>
+</div>
+
+<div class="card officer-card">
+<img src="your-photo.jpg">
+<h3>Ricalyn Jimenez</h3>
+<p>SSLG Vice President</p>
+</div>
+
+<div class="card officer-card">
+<img src="your-photo.jpg">
+<h3>Secretariat</h3>
+<p>Records & Documentation</p>
+</div>
+
+</div>
+
+<h2 class="section-title" style="margin-top:90px;">
+Committees
+</h2>
+
+<div class="cards">
 
 <div class="card">
-<h3>President</h3>
-<p>Kirk Immanuel Gardoce</p>
+<h3>Program Committee</h3>
+<p>Facilitates school-wide activities and event operations.</p>
 </div>
 
 <div class="card">
-<h3>Vice President</h3>
-<p>Ricalyn D. Jimenez</p>
+<h3>Finance Committee</h3>
+<p>Handles budgeting, financial planning, and accountability.</p>
 </div>
 
 <div class="card">
-<h3>Madeleine B. Onato</h3>
-<p>Secretary</p>
-</div>
-
-<div class="card">
-<h3>Marian B. Manua</h3>
-<p>Treasurer</p>
-</div>
-
-<div class="card">
-<h3>Valen Heart B. Yap</h3>
-<p>Auditor</p>
-</div>
-
-<div class="card">
-<h3>Ryza Jane A. Magbanua</h3>
-<p>Public Information Officer</p>
-</div>
-
-<div class="card">
-<h3>Risty A. Gardoze</h3>
-<p>Protocol Officer</p>
-</div>
-
-<div class="card">
-<h3>Preacious Jewel Faith E. De Juan</h3>
-<p>Gr.8 Representative</p>
-</div>
-
-<div class="card">
-<h3>Jeanzy Fe F. Castillo</h3>
-<p>Gr.9 Representative</p>
-</div>
-
-<div class="card">
-<h3>Kiven Kyle F. Bornales</h3>
-<p>Gr.10 Representative</p>
-</div>
-
-<div class="card">
-<h3>Charity D. Magbanua</h3>
-<p>Gr.11 Representative</p>
-</div>
-
-<div class="card">
-<h3>Rhona Jean Danieles</h3>
-<p>Gr.12 Representative</p>
-</div>
-
-<div class="card">
-<h3>Melchor G. Galban</h3>
-<p>Adviser</p>
-</div>
-
-  
-</div>
-
-</section>
-
-<!-- ANNOUNCEMENTS -->
-<section>
-
-<h2 class="title">Announcements</h2>
-
-<div class="card-container">
-
-<div class="card">
-<h3>Upcoming Event</h3>
-<p>Coordinating Council registration opening soon.</p>
-</div>
-
-<div class="card">
-<h3>Project PPP</h3>
-<p>Official rollout of SSLG flagship programs.</p>
-</div>
-
-<div class="card">
-<h3>Reminder</h3>
-<p>All students are encouraged to participate in SSLG activities.</p>
+<h3>Public Relations</h3>
+<p>Manages communication, publicity, and information dissemination.</p>
 </div>
 
 </div>
 
 </section>
+
+<!-- PROJECT PPP -->
+
+<section id="ppp">
+
+<h2 class="section-title">
+Project PPP
+</h2>
+
+<p class="section-desc">
+Proteksyon, Pag-unlad, at Pagpapahalaga — the flagship learner-centered initiative of PNHS SSLG.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Fix-in Policy</h3>
+<p>
+A student concern system ensuring learner voices are properly heard and addressed.
+</p>
+
+<p><b>Implementation:</b> June 2026</p>
+
+<a href="#" style="color:#9cc6ff;">
+Access Google Form
+</a>
+
+</div>
+
+<div class="card">
+<h3>Greener Puti-an High</h3>
+<p>
+Environmental sustainability initiative promoting cleanliness and awareness.
+</p>
+
+<p><b>Activities:</b> Clean-up drives, waste management campaigns.</p>
+
+</div>
+
+<div class="card">
+<h3>Tinguha</h3>
+<p>
+Safe-space initiative supporting learner welfare and emotional support.
+</p>
+
+<p><b>Objective:</b> Student support and inclusivity.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CALENDAR -->
+
+<section id="calendar">
+
+<h2 class="section-title">
+Calendar of Activities
+</h2>
+
+<p class="section-desc">
+Official SSLG PPAs from June 2026 to March 2027.
+</p>
+
+<div class="cards">
+
+<div class="card"><h3>June</h3><p>Social Week</p></div>
+<div class="card"><h3>July</h3><p>Orientation Program</p></div>
+<div class="card"><h3>August</h3><p>Buwan ng Wika</p></div>
+<div class="card"><h3>September</h3><p>Teacher’s Month</p></div>
+<div class="card"><h3>October</h3><p>Leadership Summit</p></div>
+<div class="card"><h3>November</h3><p>Outreach Program</p></div>
+<div class="card"><h3>December</h3><p>Christmas Program</p></div>
+<div class="card"><h3>January</h3><p>School Campaigns</p></div>
+<div class="card"><h3>February</h3><p>Foundation Activities</p></div>
+<div class="card"><h3>March</h3><p>Recognition & Closing</p></div>
+
+</div>
+
+</section>
+
+<!-- LEGISLATIVE -->
+
+<section id="legislative">
+
+<h2 class="section-title">
+Legislative Works
+</h2>
+
+<p class="section-desc">
+Official learner-centered policies, resolutions, and SSLG initiatives.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Fix-in Policy Resolution</h3>
+</div>
+
+<div class="card">
+<h3>Greener PNHS Resolution</h3>
+</div>
+
+<div class="card">
+<h3>Committee Recognition Act</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2 class="section-title">
+Past Events
+</h2>
+
+<div class="gallery">
+
+<img src="your-photo.jpg">
+<img src="your-photo.jpg">
+<img src="your-photo.jpg">
+<img src="your-photo.jpg">
+
+</div>
+
+</section>
+
+<!-- CONTACTS -->
+
+<section id="contacts">
+
+<h2 class="section-title">
+Contacts
+</h2>
+
+<div class="contact-box">
+
+<p>
+Facebook Page:
+<a href="#">
+PNHS SSLG Official
+</a>
+</p>
+
+<p>
+Gmail:
+<a href="#">
+pnhssslg@gmail.com
+</a>
+</p>
+
+</div>
 
 </section>
 
 <!-- FOOTER -->
+
 <footer>
+
 PNHS SSLG © 2026 | Leadership • Service • Unity
+
 </footer>
 
 </body>
+
 </html>
