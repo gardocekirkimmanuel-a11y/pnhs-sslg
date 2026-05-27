@@ -365,6 +365,24 @@ height:320px;
 
 }
 
+.fade-in{
+animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+  
 </style>
 
 </head>
@@ -423,7 +441,7 @@ About Us
 
 <!-- ABOUT -->
 
-<section class="section" id="about">
+<section class="section fade-in" id="about">
 
 <h2 class="section-title">
 About PNHS SSLG
