@@ -123,83 +123,489 @@ background:#030812;
 <!-- NAV -->
 
 <nav>
+<!DOCTYPE html>
+<html lang="en">
 
-<a href="index.html">Home</a>
-<a href="updates.html">Updates</a>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PNHS SSLG Updates & Announcements</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,sans-serif;
+
+background:
+linear-gradient(to bottom,
+#01040b,
+#07162b,
+#0b1f3d);
+
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+
+padding:18px 40px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:
+rgba(0,0,0,0.35);
+
+backdrop-filter:blur(18px);
+
+z-index:1000;
+
+border-bottom:
+1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:14px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#9ec9ff;
+}
+
+/* HERO */
+
+.hero{
+padding:
+170px 8% 100px;
+
+text-align:center;
+}
+
+.hero h1{
+font-size:68px;
+margin-bottom:25px;
+line-height:1.1;
+}
+
+.hero p{
+max-width:900px;
+margin:auto;
+line-height:1.9;
+font-size:19px;
+opacity:0.92;
+}
+
+/* SECTION */
+
+.section{
+padding:20px 8% 100px;
+}
+
+/* FEATURED */
+
+.featured-update{
+padding:40px;
+
+border-radius:30px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,0.10),
+rgba(255,255,255,0.03)
+);
+
+border:
+1px solid rgba(255,255,255,0.12);
+
+backdrop-filter:blur(20px);
+
+margin-bottom:50px;
+}
+
+.featured-update h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.featured-update p{
+line-height:1.9;
+font-size:18px;
+opacity:0.92;
+}
+
+/* TAGS */
+
+.tags{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.tag{
+padding:10px 18px;
+border-radius:999px;
+background:
+rgba(255,255,255,0.08);
+font-size:13px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+}
+
+/* CARDS */
+
+.card{
+background:
+rgba(255,255,255,0.08);
+
+border:
+1px solid rgba(255,255,255,0.12);
+
+backdrop-filter:blur(18px);
+
+border-radius:24px;
+
+padding:28px;
+
+box-shadow:
+0 10px 35px rgba(0,0,0,0.35);
+
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.card p{
+line-height:1.8;
+opacity:0.92;
+}
+
+/* TIMELINE */
+
+.timeline{
+margin-top:70px;
+}
+
+.timeline-title{
+font-size:42px;
+margin-bottom:35px;
+text-align:center;
+}
+
+.timeline-item{
+padding:25px;
+margin-bottom:20px;
+
+border-left:
+4px solid #9ec9ff;
+
+background:
+rgba(255,255,255,0.05);
+
+border-radius:0 20px 20px 0;
+}
+
+.timeline-item h4{
+margin-bottom:10px;
+font-size:22px;
+}
+
+.timeline-item p{
+line-height:1.8;
+opacity:0.92;
+}
+
+/* FOOTER */
+
+footer{
+padding:35px;
+text-align:center;
+background:#02060f;
+margin-top:60px;
+
+border-top:
+1px solid rgba(255,255,255,0.08);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:15px;
+padding:15px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.featured-update h2{
+font-size:30px;
+}
+
+.timeline-title{
+font-size:32px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+PNHS SSLG
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="updates.html">Updates</a></li>
+
+</ul>
 
 </nav>
 
-<!-- HEADER -->
+<!-- HERO -->
 
-<header>
+<section class="hero">
 
 <h1>
-Latest SSLG Updates
+Updates & Announcements
 </h1>
 
 <p>
-Stay informed with the latest announcements, projects, activities, and official communications from the PNHS Supreme Secondary Learner Government.
+Stay informed with the latest SSLG announcements, learner-centered initiatives, leadership programs, activities, and official updates from the Puti-an National High School Supreme Secondary Learner Government.
 </p>
 
-</header>
+</section>
 
-<!-- ANNOUNCEMENTS -->
+<!-- MAIN SECTION -->
 
-<div class="container">
+<section class="section">
 
-<div class="card">
+<!-- FEATURED -->
+
+<div class="featured-update">
 
 <h2>
 Project PPP Official Launch
 </h2>
 
 <p>
-The PNHS SSLG officially launches Project PPP: Proteksyon, Pag-unlad, at Pagpapahalaga for School Year 2026–2027.
+The PNHS SSLG officially launches Project PPP: Proteksyon, Pag-unlad, at Pagpapahalaga for School Year 2026–2027, focusing on learner welfare, leadership development, student empowerment, and school improvement initiatives.
 </p>
+
+<div class="tags">
+
+<div class="tag">Official</div>
+<div class="tag">Leadership</div>
+<div class="tag">Learner Welfare</div>
+<div class="tag">Project PPP</div>
 
 </div>
 
+</div>
+
+<!-- UPDATE CARDS -->
+
+<div class="grid">
+
 <div class="card">
 
-<h2>
+<h3>
 Leadership Summit 2026
-</h2>
+</h3>
 
 <p>
-Registration for the SSLG Leadership Summit will officially open next week.
+Upcoming student leadership summit and development training for SSLG officers and student leaders.
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>
+<h3>
 Fix-in Policy Portal
-</h2>
+</h3>
 
 <p>
-Learners may now officially submit student concerns through the SSLG Fix-in Policy Google Form.
+Students may now officially submit learner concerns and suggestions through the SSLG Fix-in Policy system.
 </p>
-
-<a href="#" class="btn">
-Access Form
-</a>
 
 </div>
 
 <div class="card">
 
-<h2>
-Upcoming Calendar Activities
-</h2>
+<h3>
+Greener Puti-an High
+</h3>
 
 <p>
-Stay tuned for upcoming student leadership programs, outreach activities, and school-wide initiatives.
+Environmental sustainability and school cleanliness initiative promoting discipline and responsibility.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Science Camp 2026
+</h3>
+
+<p>
+Interactive science and leadership camp designed to strengthen collaboration and innovation.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Kasadyahan Fest 2026
+</h3>
+
+<p>
+School-wide celebration promoting unity, participation, and learner engagement.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Tinguha Initiative
+</h3>
+
+<p>
+Safe-space and learner support initiative promoting student welfare and inclusivity.
 </p>
 
 </div>
 
 </div>
+
+<!-- TIMELINE -->
+
+<div class="timeline">
+
+<h2 class="timeline-title">
+Latest Update Timeline
+</h2>
+
+<div class="timeline-item">
+
+<h4>
+June 2026
+</h4>
+
+<p>
+Official opening of Social Week and SSLG learner engagement activities.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h4>
+July 2026
+</h4>
+
+<p>
+Launch of Greener Puti-an High environmental initiatives.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h4>
+August 2026
+</h4>
+
+<p>
+Buwan ng Wika celebration and learner participation programs.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h4>
+October 2026
+</h4>
+
+<p>
+Leadership Summit and Science Camp implementation.
+</p>
+
+</div>
+
+</div>
+
+</section>
 
 <!-- FOOTER -->
 
